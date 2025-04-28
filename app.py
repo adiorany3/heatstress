@@ -24,7 +24,8 @@ def get_impact(heat_index):
     else:
         return "Dapat menyebabkan tingginya kematian"
 
-st.set_page_config(page_title="Kalkulator Heat Stress Index Ayam Broiler")
+# Add favicon to the Streamlit app
+st.set_page_config(page_title="Kalkulator Heat Stress Index Ayam Broiler", page_icon="🐔")
 
 st.title("Kalkulator Heat Stress Index Ayam Broiler")
 
