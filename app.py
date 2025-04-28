@@ -153,27 +153,6 @@ Sumber: Fadilah R. 2007. Beternak Unggas Bebas Flu Burung. Agromedia. Jakarta.
 </div>
 """, unsafe_allow_html=True)
 
-# Add supporting visualization: Bar chart for performance impact
-performance_impact = [
-    "Tidak menyebabkan permasalahan performa",
-    "Mulai terjadi gangguan performance ayam",
-    "Penurunan feed intake, peningkatan water intake, dan penurunan performa",
-    "Awal kejadian kematian",
-    "Dapat menyebabkan tingginya kematian"
-]
-
-impact_counts = [50, 30, 10, 5, 5]  # Example data for visualization
-
-fig_bar = go.Figure([go.Bar(x=performance_impact, y=impact_counts)])
-fig_bar.update_layout(
-    title="Distribusi Pengaruh Heat Stress Terhadap Performa",
-    xaxis_title="Pengaruh Terhadap Performa",
-    yaxis_title="Jumlah Kasus",
-    xaxis_tickangle=-45
-)
-
-st.plotly_chart(fig_bar)
-
 # Footer with LinkedIn profile link and improved styling
 st.markdown("""
 <hr style="height:1px;border:none;color:#333;background-color:#333;margin-top:30px;margin-bottom:20px">
