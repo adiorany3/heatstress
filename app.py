@@ -183,3 +183,24 @@ hide_st_style = """
         </style>
         """
 st.markdown(hide_st_style, unsafe_allow_html=True)
+
+# Add supporting visualization: Bar chart for performance impact
+performance_impact = [
+    "Tidak menyebabkan permasalahan performa",
+    "Mulai terjadi gangguan performance ayam",
+    "Penurunan feed intake, peningkatan water intake, dan penurunan performa",
+    "Awal kejadian kematian",
+    "Dapat menyebabkan tingginya kematian"
+]
+
+impact_counts = [50, 30, 10, 5, 5]  # Example data for visualization
+
+fig_bar = go.Figure([go.Bar(x=performance_impact, y=impact_counts)])
+fig_bar.update_layout(
+    title="Distribusi Pengaruh Heat Stress Terhadap Performa",
+    xaxis_title="Pengaruh Terhadap Performa",
+    yaxis_title="Jumlah Kasus",
+    xaxis_tickangle=-45
+)
+
+st.plotly_chart(fig_bar)
