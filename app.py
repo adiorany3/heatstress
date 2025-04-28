@@ -85,6 +85,15 @@ if st.button("Hitung Heat Stress Index"):
     fig_line.add_vline(x=temp, line_dash="dash", line_color="red")
     fig_line.add_hline(y=heat_index, line_dash="dash", line_color="red")
     
+    # Add the relationship between temperature, heat stress index, and performance impact
+    fig_line.add_trace(go.Scatter(
+        x=temps,
+        y=[get_impact(calculate_heat_index(t, humidity)) for t in temps],
+        mode='lines',
+        name='Pengaruh Terhadap Performa',
+        line=dict(dash='dot')
+    ))
+
     fig_line.update_layout(
         title="Hubungan Suhu dan Heat Stress Index",
         xaxis_title="Suhu (°C)",
